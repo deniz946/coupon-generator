@@ -24,6 +24,7 @@ export class CouponGenerator implements ICouponGenerator {
   private charsets: ICharsets;
   prefix: string;
   sufix: string;
+  SEPARATOR_CHAR = "-";
 
   constructor(
     qty: number,
@@ -49,8 +50,8 @@ export class CouponGenerator implements ICouponGenerator {
     const isTherePrefix = !!this.prefix;
     const isThereSufix = !!this.sufix;
 
-    const prefixText = this.prefix.concat("-");
-    const sufixText = "-".concat(this.sufix);
+    const prefixText = this.prefix.concat(this.SEPARATOR_CHAR);
+    const sufixText = this.SEPARATOR_CHAR.concat(this.sufix);
 
     return generatedCoupons.map(
       (coupon) =>

@@ -16,8 +16,8 @@ export class Randomer implements ICouponGenerator {
 
   generate() {
     var count = this.qty;
-
     var codes: { [index: string]: boolean } = {};
+    
     while (count > 0) {
       var code = this.generateSingle();
       if (!codes[code]) {
