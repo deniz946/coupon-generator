@@ -1,0 +1,11 @@
+{
+    "qty": 50,
+    "chars": 6,
+    "algorithm": "randomAlphabetic",  
+    "charsets": {
+        "numbers": "0123456789",
+        "alphabetic": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "alphanumeric": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "alphanumericSymbols": "0123456789abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ!\"·$%&/()=?¿¡'`^+*´¨,;.:-_"
+    }
+}

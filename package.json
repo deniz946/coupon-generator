@@ -1,0 +1,16 @@
+{
+  "name": "traffgen-coupons",
+  "version": "1.0.0",
+  "description": "Random coupon generator",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "ts-node ./src/app.ts",
+  },
+  "author": "Deniz Mehmed",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.21",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
