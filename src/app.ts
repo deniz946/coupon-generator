@@ -6,7 +6,9 @@ const generator = new CouponGenerator(
   config.qty,
   config.chars,
   config.algorithm,
-  config.charsets
+  config.charsets,
+  config.prefix,
+  config.sufix
 );
 
 console.log(generator.generate());

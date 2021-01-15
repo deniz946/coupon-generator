@@ -22,23 +22,43 @@ export class CouponGenerator implements ICouponGenerator {
   private qty: number;
   private maxChars: number;
   private charsets: ICharsets;
+  prefix: string;
+  sufix: string;
 
   constructor(
     qty: number,
     maxChars: number,
     algorithm: string,
-    charsets: ICharsets
+    charsets: ICharsets,
+    prefix = "",
+    sufix = ""
   ) {
     this.qty = qty;
     this.maxChars = maxChars;
     this.charsets = charsets;
+    this.prefix = prefix;
+    this.sufix = sufix;
     this.generator = this.getGenerator(algorithm);
   }
-  
-  generate(): string[] {
-    return this.generator.generate();
-  }
 
+  generate(): string[] {
+    const generatedCoupons = this.generator.generate();
+    return this.addPrefixSufix(generatedCoupons);
+  }
+  private addPrefixSufix(generatedCoupons: string[]): string[] {
+    const isTherePrefix = !!this.prefix;
+    const isThereSufix = !!this.sufix;
+
+    const prefixText = this.prefix.concat("-");
+    const sufixText = "-".concat(this.sufix);
+
+    return generatedCoupons.map(
+      (coupon) =>
+        `${isTherePrefix ? prefixText : this.prefix}${coupon}${
+          isThereSufix ? sufixText : this.sufix
+        }`
+    );
+  }
 
   private getGenerator(algorithm: string): Secuential | Randomer {
     switch (algorithm) {

@@ -1,7 +1,9 @@
 {
     "qty": 50,
     "chars": 6,
-    "algorithm": "randomAlphabetic",  
+    "algorithm": "randomAlphabetic",
+    "prefix": "pre",
+    "sufix": "2021",
     "charsets": {
         "numbers": "0123456789",
         "alphabetic": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",

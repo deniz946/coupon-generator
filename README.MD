@@ -1,7 +1,32 @@
 - Antes de ejecutar el proyecto debe de instalar todas las dependencias con npm install o yarn
 - Luego puede ejecutar el programa cli escribiendo npm start / npm run start en su consola
 
-Posibles opciones para algorithm: secuential, randomNumber, randomAlphabetic, randomAlphaNumeric, randomalphanumericSymbols
+config.json
+```JSON
+{
+    "qty": 50, 
+    "chars": 6,
+    "algorithm": "randomAlphabetic",
+    "prefix": "pre", 
+    "sufix": "2021",
+    "charsets": { 
+        "numbers": "[...]",
+        "alphabetic": "[...]",
+        "alphanumeric": "[...]",
+        "alphanumericSymbols": "[...]"
+    }
+}
+```
+* **qty**(required): number of coupons to generate
+* **chars**(required): chars of each coupon (sufix/prefix chars not included)
+* **algorithm**(required): algorithm used for the coupons geneartion
+    - **Available algorithms**: randomNumber, randomAlphabetic, randomAlphaNumeric, randomalphanumericSymbols
+
+* **charsets**(required): available charsets to use for generating the coupon chars
+* **prefix**(optional)(default: empty string): add prefix to each coupon
+* **sufix**(optional)(default: empty string): add sufix to each coupon
+
+---
 
 Escribe un programa que al ejecutarse genere una lista de códigos/cupones de acuerdo a un tipo de cupón especificado en una configuración. La configuración se encuentra en la raiz del proyecto llamado "config.json".
 
