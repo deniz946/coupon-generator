@@ -26,6 +26,9 @@ config.json
 * **prefix**(optional)(default: empty string): add prefix to each coupon
 * **sufix**(optional)(default: empty string): add sufix to each coupon
 
+Script ran with this config file:
+![preview](https://i.imgur.com/F0eRHYg.png)
+
 ---
 
 Escribe un programa que al ejecutarse genere una lista de códigos/cupones de acuerdo a un tipo de cupón especificado en una configuración. La configuración se encuentra en la raiz del proyecto llamado "config.json".
