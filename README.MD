@@ -1,3 +1,6 @@
+- Antes de ejecutar el proyecto debe de instalar todas las dependencias con npm install o yarn
+- Luego puede ejecutar el programa cli escribiendo npm start / npm run start en su consola
+
 Posibles opciones para algorithm: secuential, randomNumber, randomAlphabetic, randomAlphaNumeric, randomalphanumericSymbols
 
 Escribe un programa que al ejecutarse genere una lista de códigos/cupones de acuerdo a un tipo de cupón especificado en una configuración. La configuración se encuentra en la raiz del proyecto llamado "config.json".
